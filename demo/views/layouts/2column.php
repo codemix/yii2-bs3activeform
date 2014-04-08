@@ -51,7 +51,7 @@
 
 CSS
 ); ?>
-<?php $this->beginContent('@codemixbs3demo/views/layouts/main.php'); ?>
+<?php $this->beginContent('@codemix/bs3/demo/views/layouts/main.php'); ?>
 <div class="row">
     <div class="col-md-2">
         <div class="bs3-docs-sidebar">

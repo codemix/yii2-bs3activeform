@@ -1,5 +1,5 @@
 <?php
-namespace Codemix\BS3;
+namespace codemix\bs3;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -7,8 +7,6 @@ use yii\base\InvalidConfigException;
 use Yii;
 
 /**
- * ActiveForm
- *
  * A Bootstrap 3 enhanced version of ActiveForm.
  */
 class ActiveForm extends \yii\widgets\ActiveForm

@@ -1,6 +1,6 @@
 <?php
-use Codemix\BS3\ActiveForm;
-use Codemix\BS3\demo\models\Demo;
+use codemix\bs3\ActiveForm;
+use codemix\bs3\demo\models\Demo;
 use yii\widgets\Menu;
 use yii\helpers\Html;
 use yii\helpers\Markdown;

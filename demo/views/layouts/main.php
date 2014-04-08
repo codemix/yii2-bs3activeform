@@ -26,7 +26,7 @@ $this->beginPage();
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <?= Html::a('Codemix\BS3\ActiveForm', 'https://github.com/codemix/yii2-bs3activeform', [
+                <?= Html::a('codemix\bs3\ActiveForm', 'https://github.com/codemix/yii2-bs3activeform', [
                     'class'=>'navbar-brand',
                 ]) ?>
             </div>

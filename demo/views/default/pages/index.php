@@ -1,6 +1,6 @@
 <?php
-use Codemix\BS3\ActiveForm;
-use Codemix\BS3\demo\models\Demo;
+use codemix\bs3\ActiveForm;
+use codemix\bs3\demo\models\Demo;
 use yii\widgets\Menu;
 use yii\helpers\Markdown;
 
@@ -31,14 +31,14 @@ $model = new Demo;
     <a href="#top" class="back-to-top">Back to top</a>
 <?php $this->endBlock(); ?>
 
-<h1>Codemix\BS3\ActiveForm</h1>
+<h1>codemix\bs3\ActiveForm</h1>
 
 <p class="lead">A Bootstrap 3 enhanced ActiveForm for Yii 2</p>
 
 <h2 id="introduction">Introduction</h2>
 
 <p>
-    <tt>Codemix\BS3\ActiveForm</tt> is an enhanced version of <tt>yii\widgets\ActiveForm</tt>.
+    <tt>codemix\bs3\ActiveForm</tt> is an enhanced version of <tt>yii\widgets\ActiveForm</tt>.
     It mainly sets the appropriate <tt>ActiveField</tt> configuration for different Bootstrap form layouts,
     and adds some useful features to <tt>ActiveField</tt>. This gives you a wide range of rendering
     options for your Bootstrap 3 forms. Make sure you check out the example pages linked on top.
@@ -63,7 +63,7 @@ $model = new Demo;
             <?= Markdown::process(<<<MD
 ```php
 <?php
-use codemix\BS3\ActiveForm;
+use codemix\bs3\ActiveForm;
 ?>
 <?php \$form = ActiveForm::begin(['layout' => 'horizontal']) ?>
     <?= \$form->field(\$model, 'demo', [

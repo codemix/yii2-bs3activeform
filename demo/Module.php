@@ -1,5 +1,5 @@
 <?php
-namespace Codemix\BS3\demo;
+namespace codemix\bs3\demo;
 
 class Module extends \yii\base\Module
 {
@@ -7,7 +7,7 @@ class Module extends \yii\base\Module
 
     public function init()
     {
-        \Yii::setAlias('@codemixbs3demo',__DIR__);
+        \Yii::setAlias('@codemix/bs3/demo',__DIR__);
         parent::init();
     }
 

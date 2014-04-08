@@ -18,7 +18,7 @@ it locally with:
 ```php
 'modules' => [
     'bs3demo' => [
-        'class' => 'Codemix\BS3\demo\Module',
+        'class' => 'codemix\bs3\demo\Module',
     ],
 ],
 ```

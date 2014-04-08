@@ -1,12 +1,10 @@
 <?php
-namespace Codemix\BS3;
+namespace codemix\bs3;
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /**
- * BS3ActiveForm
- *
  * A Bootstrap 3 enhanced version of ActiveField.
  */
 class ActiveField extends \yii\widgets\ActiveField

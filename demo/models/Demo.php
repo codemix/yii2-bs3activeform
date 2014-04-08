@@ -1,5 +1,5 @@
 <?php
-namespace Codemix\BS3\demo\models;
+namespace codemix\bs3\demo\models;
 
 class Demo extends \yii\base\Model
 {
