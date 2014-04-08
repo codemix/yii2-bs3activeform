@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/atelier-forest.light.min.css">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <style>
+    .hljs {
+        background-color: #f5f5f5;
+    }
+    </style>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title></title>
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="S19OcS05cXZ8MD8BGlUhHy8IJwBrS0IZDQ0bRXJhBQ4JCAJDGmE2FQ==">
+<style>    .bs3-docs-sidebar {
+        position: fixed;
+        top: 95px;
+    }
+    .bs3-docs-sidebar .nav>li>a {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #999;
+        padding: 4px 20px;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>li>a:hover,
+    .bs3-docs-sidebar .nav>li>a:focus {
+        padding-left: 19px;
+        color: #563d7c;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .back-to-top {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+    }
+    .back-to-top:hover {
+        text-decoration: none;
+        color: #563d7c;
+    }
+</style></head>
+
+<body data-spy="scroll" data-target=".bs3-docs-sidebar">
+
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/codemix/yii2-bs3activeform">codemix\bs3\ActiveForm</a>            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav"><li class="active"><a href="index.html">Overview</a></li>
+<li><a href="standard.html">Standard Layout</a></li>
+<li><a href="horizontal.html">Horizontal Layout</a></li>
+<li><a href="inline.html">Inline Layout</a></li></ul>            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-md-2">
+        <div class="bs3-docs-sidebar">
+                <ul class="nav"><li><a href="#introduction">Introduction</a></li>
+<li><a href="#field-options">Field Options</a></li>
+<li><a href="#form-options">Form Options</a></li></ul>    <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        
+
+<h1>codemix\bs3\ActiveForm</h1>
+
+<p class="lead">A Bootstrap 3 enhanced ActiveForm for Yii 2</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>
+    <tt>codemix\bs3\ActiveForm</tt> is an enhanced version of <tt>yii\widgets\ActiveForm</tt>.
+    It mainly sets the appropriate <tt>ActiveField</tt> configuration for different Bootstrap form layouts,
+    and adds some useful features to <tt>ActiveField</tt>. This gives you a wide range of rendering
+    options for your Bootstrap 3 forms. Make sure you check out the example pages linked on top.
+</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Example 1: Rendering features</div>
+    <div class="panel-body row">
+        <div class="col-md-5">
+           <form id="w0" class="form-horizontal" action="/index.php?r=bs3demo/default/pages&amp;view=index" method="post" role="form">
+<input type="hidden" name="_csrf" value="S19OcS05cXZ8MD8BGlUhHy8IJwBrS0IZDQ0bRXJhBQ4JCAJDGmE2FQ==">                <div class="form-group field-demo-demo required">
+
+<div class="col-sm-6 col-sm-offset-3">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]" placeholder="Demolabel">
+<div class="help-block "></div>
+</div>
+
+</div>                <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<div class="help-block "></div>
+</div>
+
+</div>                <div class="form-group field-demo-demo required">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block "></div>
+</div>
+
+</div>                <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><label class="radio-inline"><input type="radio" name="Demo[demo]" value="1"> 1</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="2"> 2</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="3"> 3</label></div>
+<div class="help-block "></div>
+</div>
+
+</div>            </form>        </div>
+        <div class="col-md-7">
+            <pre><code class="language-php">&lt;?php
+use codemix\bs3\ActiveForm;
+?&gt;
+&lt;?php $form = ActiveForm::begin(['layout' =&gt; 'horizontal']) ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputOptions' =&gt; [
+            'placeholder' =&gt; $model-&gt;getAttributeLabel('demo'),
+        ],
+    ])-&gt;label(false); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;dropDownList($items); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkbox(); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;inline()-&gt;radioList($items); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-warning">
+    <p>
+        <b>Note:</b> This class does <i>not</i> include any Bootstrap 3 CSS or Javascript files.
+        We recommend using the <tt>yii2-bootstrap</tt> extension to include those files.
+    </p>
+</div>
+
+<h2 id="field-options">Field Options</h2>
+
+<p>
+    We have extended <tt>yii\widgets\ActiveField</tt> to add some useful features for Bootstrap 3 forms.
+</p>
+
+<h3>New Template Placeholders</h3>
+
+<p>
+    There are a couple of new placeholders that you can use in the <code>template</code> option.
+    Some of them are automatically configured, when you choose a form layout.
+</p>
+
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Placeholder</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>{beginLabel}</code></td>
+            <td>
+                The opening label tag (if you need more control over the label than with <code>{label}</code>).
+            </td>
+        </tr>
+        <tr>
+            <td><code>{labelTitle}</code></td>
+            <td>
+                The label title, for use with <code>{beginLabel}</code> / <code>{endLabel}.</code>
+            </td>
+        </tr>
+        <tr>
+            <td><code>{endLabel}</code></td>
+            <td>
+                The closing label tag.
+            </td>
+        </tr>
+        <tr>
+            <td><code>{beginWrapper}</code></td>
+            <td>
+                The opening wrapper tag. This is only used for some elements and layouts.
+            </td>
+        </tr>
+        <tr>
+            <td><code>{endWrapper}</code></td>
+            <td>
+                The closing wrapper tag. This is only used for some elements and layouts.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Options</h3>
+
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Option</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>inline</code></td>
+            <td>
+                This option can be used with <tt>radioButtonList</tt> and <tt>checkBoxList</tt> elements
+                to render inline list items. If set to <code>true</code>, it will automatically set the
+                appropriate <code>template</code> and <code>inputOptions</code> (i.e. labelOptions).
+                You can also call the <tt>inline()</tt> method instead.
+            </td>
+        <tr>
+        <tr>
+            <td><code>label</code></td>
+            <td>
+                This can be set to <code>false</code> to disable the field label. Default is <code>true</code>.
+            </td>
+        <tr>
+        <tr>
+            <td><code>inputTemplate</code></td>
+            <td>
+                An optional template for the input element. If set, this will be used to render the
+                content of the <code>{input}</code> placeholder. This can be used to create input
+                groups (see the examples). The default is none.
+            </td>
+        <tr>
+        <tr>
+            <td><code>wrapperOptions</code></td>
+            <td>
+                The <code>options</code> of the wrapper tag.
+            </td>
+        <tr>
+        <tr>
+            <td><code>horizontalCssClasses</code></td>
+            <td>
+                This is only used with horizontal layout. It defines the column grid classes to use
+                for the label, the wrapper, the error and the hint. There's also an offset class
+                that will be applied if there's no label (e.g. on checkboxes or if label was disabled).
+                The default ist:
+                <pre>
+[
+    'offset' =&gt; 'col-sm-offset-3',
+    'label' =&gt; 'col-sm-3',
+    'wrapper' =&gt; 'col-sm-6',
+    'error' =&gt; '',
+    'hint' =&gt; 'col-sm-3',
+]
+                </pre>
+            </td>
+        <tr>
+        <tr>
+            <td><code>enableErrorBlock</code></td>
+            <td>
+                Whether to render the error block. This is mainly useful for <code>inline</code> forms.
+                By default this is <code>true</code> for <code>standard</code> and <code>horizontal</code>
+                layout and <code>false</code> for <code>inline</code> layout.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Methods</h3>
+
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>inline($value = true)</code></td>
+            <td>
+                Set the <code>inline</code> option of the field. This only affects <tt>radioButtonList</tt>s and
+                <tt>checkBoxList</tt>s.
+            </td>
+        </tr>
+        <tr>
+            <td><code>label($label = null, $options = [])</code></td>
+            <td>
+                This overrides <tt>yii\widgets\ActiveField::label()</tt> and disables the label if
+                <code>false</code> is passed as <code>$label</code> value.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h2 id="form-options">Form Options</h2>
+
+<p>
+    You can preconfigure all the above field options in the <code>fieldConfig</code> property of the form.
+    In addition there's now a <code>layout</code> property to configure the main Bootstrap 3 form layout.
+</p>
+
+<table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Option</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>layout</code></td>
+            <td>
+                The form layout to use. Options are <code>standard</code> (default), <code>horizontal</code>
+                and <code>inline</code>. Depending on the layout different default field settings will be used.
+            </td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/yii2-bs3activeform/js/jquery.js"></script>
+<script src="/yii2-bs3activeform/js/yii.js"></script>
+<script src="/yii2-bs3activeform/js/yii.validation.js"></script>
+<script src="/yii2-bs3activeform/js/yii.activeForm.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#w0').yiiActiveForm({"demo":{"validate":function (attribute, value, messages) {yii.validation.required(value, messages, {"message":"Demolabel cannot be blank."});},"id":"demo-demo","name":"demo","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-demo-demo","input":"#demo-demo","error":".help-block"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"has-error","successCssClass":"has-success","validatingCssClass":"validating","ajaxParam":"ajax","ajaxDataType":"json"});
+});</script></body>
+</html>

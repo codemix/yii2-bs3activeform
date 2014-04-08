@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/atelier-forest.light.min.css">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <style>
+    .hljs {
+        background-color: #f5f5f5;
+    }
+    </style>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title></title>
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="Vmd6a0VEWVQ8LjspfQ8MZT43Iw0NchgQMzBMDARwbgszUztYKyMrFQ==">
+<style>    .bs3-docs-sidebar {
+        position: fixed;
+        top: 95px;
+    }
+    .bs3-docs-sidebar .nav>li>a {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #999;
+        padding: 4px 20px;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>li>a:hover,
+    .bs3-docs-sidebar .nav>li>a:focus {
+        padding-left: 19px;
+        color: #563d7c;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .back-to-top {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+    }
+    .back-to-top:hover {
+        text-decoration: none;
+        color: #563d7c;
+    }
+</style></head>
+
+<body data-spy="scroll" data-target=".bs3-docs-sidebar">
+
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/codemix/yii2-bs3activeform">codemix\bs3\ActiveForm</a>            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav"><li><a href="index.html">Overview</a></li>
+<li><a href="standard.html">Standard Layout</a></li>
+<li><a href="horizontal.html">Horizontal Layout</a></li>
+<li class="active"><a href="inline.html">Inline Layout</a></li></ul>            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-md-2">
+        <div class="bs3-docs-sidebar">
+                <ul class="nav"><li><a href="#default-options">Default Options</a></li>
+<li><a href="#hint">Hint</a></li></ul>    <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        
+
+<h1>Examples: Inline Layout</h1>
+
+<p>
+    If <code>layout</code> is set to <code>inline</code> an inline form is rendered.
+</p>
+
+<pre><code class="language-php">&lt;?php $form = ActiveForm::begin(['layout' =&gt; 'inline']) ?&gt;
+</code></pre>
+
+<p>
+    Following is a list of the most common form elements to exemplify different options and validation states.
+</p>
+
+<div class="alert alert-warning">
+    <p>
+        <b>Note:</b> While the class does support error messages and hints in this mode,
+        Bootstrap 3 does not really display them nicely. That's why error messages are disabled
+        by default in this mode. You can enable them at your own risk through
+        <code>enableErrorBlock</code> in the <code>fieldConfig</code> on the form. Also note that input
+        groups are not really supported well by Bootstrap 3, as they span the full width.
+    <p>
+</div>
+
+<form id="w0" class="form-inline" action="/index.php?r=bs3demo/default/pages&amp;view=inline" method="post" role="form">
+<input type="hidden" name="_csrf" value="Vmd6a0VEWVQ8LjspfQ8MZT43Iw0NchgQMzBMDARwbgszUztYKyMrFQ==">
+    <hr>
+
+    <h2 id="default-options">Default Options</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                                <div class="form-group field-demo-demo required">
+<label class="sr-only" for="demo-demo">Demolabel</label>
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+
+<p class="help-block"></p>
+</div>                <div class="form-group field-demo-demo required">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+<p class="help-block"></p>
+
+</div>
+</div>                <div class="form-group field-demo-demo required">
+<label class="sr-only" for="demo-demo">Demolabel</label>
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+
+<p class="help-block"></p>
+</div>                <div class="form-group field-demo-demo required">
+<label class="sr-only" for="demo-demo">Demolabel</label>
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="1"> 1</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="2"> 2</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div></div>
+
+<p class="help-block"></p>
+</div>            </p>
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo'); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkbox(); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;dropDownList($items); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkboxList($items); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="hint">Hint</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <div class="form-group field-demo-demo required">
+<label class="sr-only" for="demo-demo">Demolabel</label>
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<p class="help-block">Hint text</p>
+<p class="help-block"></p>
+</div>                <div class="form-group field-demo-demo required">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+<p class="help-block"></p>
+<p class="help-block">Hint text</p>
+</div>
+</div>                <div class="form-group field-demo-demo required">
+<label class="sr-only" for="demo-demo">Demolabel</label>
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<p class="help-block">Hint text</p>
+<p class="help-block"></p>
+</div>            </p>
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint text'); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint text')-&gt;checkbox(); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint text')-&gt;dropDownList($items); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+</form>    </div>
+</div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/yii2-bs3activeform/js/jquery.js"></script>
+<script src="/yii2-bs3activeform/js/yii.js"></script>
+<script src="/yii2-bs3activeform/js/yii.validation.js"></script>
+<script src="/yii2-bs3activeform/js/yii.activeForm.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#w0').yiiActiveForm({"demo":{"validate":function (attribute, value, messages) {yii.validation.required(value, messages, {"message":"Demolabel cannot be blank."});},"id":"demo-demo","name":"demo","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-demo-demo","input":"#demo-demo","error":".help-block"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"has-error","successCssClass":"has-success","validatingCssClass":"validating","ajaxParam":"ajax","ajaxDataType":"json"});
+});</script></body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/atelier-forest.light.min.css">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <style>
+    .hljs {
+        background-color: #f5f5f5;
+    }
+    </style>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title></title>
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="RllDRFRMeEc8NhsjZiIUIRwLFDIsexQhKz80LhEdM2olPRE3JX8JPg==">
+<style>    .bs3-docs-sidebar {
+        position: fixed;
+        top: 95px;
+    }
+    .bs3-docs-sidebar .nav>li>a {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #999;
+        padding: 4px 20px;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>li>a:hover,
+    .bs3-docs-sidebar .nav>li>a:focus {
+        padding-left: 19px;
+        color: #563d7c;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .back-to-top {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+    }
+    .back-to-top:hover {
+        text-decoration: none;
+        color: #563d7c;
+    }
+</style></head>
+
+<body data-spy="scroll" data-target=".bs3-docs-sidebar">
+
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/codemix/yii2-bs3activeform">codemix\bs3\ActiveForm</a>            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav"><li><a href="index.html">Overview</a></li>
+<li><a href="standard.html">Standard Layout</a></li>
+<li class="active"><a href="horizontal.html">Horizontal Layout</a></li>
+<li><a href="inline.html">Inline Layout</a></li></ul>            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-md-2">
+        <div class="bs3-docs-sidebar">
+                <ul class="nav"><li><a href="#default-options">Default Options</a></li>
+<li><a href="#hint">Hint</a></li>
+<li><a href="#placeholder">Placeholder</a></li>
+<li><a href="#disabled-label">Disabled Label</a></li>
+<li><a href="#column-sizing">Column Sizing</a></li>
+<li><a href="#list-controls">List Controls</a></li>
+<li><a href="#inline-lists">Inline Lists</a></li>
+<li><a href="#custom-inputs">Custom Inputs</a></li>
+<li><a href="#custom-columns">Custom Columns</a></li></ul>    <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        
+
+<h1>Examples: Horizontal Layout</h1>
+
+<p>
+    If <code>layout</code> is set to <code>horizontal</code> a horizontal form is rendered.
+</p>
+
+<pre><code class="language-php">&lt;?php $form = ActiveForm::begin(['layout' =&gt; 'horizontal']) ?&gt;
+</code></pre>
+
+<p>
+    Here by default the <code>template</code> is set to
+    <code>{label} {beginWrapper} {input} {error} {endWrapper} {help}</code>,
+    which will use 3 columns, one for label (<code>col-sm-3</code>), input (<code>col-sm-6</code>)
+    and help text (<code>col-sm-3</code>) each. Error messages get rendered below the input. The column
+    arrangement can easily be changed, though (see <a href="#custom-columns">below</a>).
+</p>
+<p>
+    Following is a list of the most common form elements to exemplify different options and validation states.
+</p>
+
+<form id="w0" class="form-horizontal" action="/index.php?r=bs3demo/default/pages&amp;view=horizontal" method="post" role="form">
+<input type="hidden" name="_csrf" value="RllDRFRMeEc8NhsjZiIUIRwLFDIsexQhKz80LhEdM2olPRE3JX8JPg==">
+    <hr>
+
+    <h2 id="default-options">Default Options</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block "></div>
+</div>
+
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required has-error">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo'); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkbox(); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="hint">Hint</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint text</div>
+</div>            <div class="form-group field-demo-demo required">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint text</div>
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+<div class="help-block col-sm-3">Hint text</div>
+</div>            <div class="form-group field-demo-demo required has-error">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+<div class="help-block col-sm-3">Hint text</div>
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint text'); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="placeholder">Placeholder</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]" placeholder="Placeholder">
+<div class="help-block "></div>
+</div>
+
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]" placeholder="Placeholder">
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputOptions' =&gt; [
+            'placeholder' =&gt; 'Placeholder',
+        ],
+    ]); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="disabled-label">Disabled Label</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+
+<div class="col-sm-6 col-sm-offset-3">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]" placeholder="Demolabel">
+<div class="help-block "></div>
+</div>
+
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+
+<div class="col-sm-6 col-sm-offset-3">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]" placeholder="Demolabel">
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputOptions' =&gt; [
+            'placeholder' =&gt; $model-&gt;getAttributeLabel('demo')
+        ],
+    ])-&gt;label(false); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="column-sizing">Column Sizing</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-2">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-4">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-4">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'horizontalCssClasses' =&gt; [
+            'wrapper' =&gt; 'col-sm-2',
+        ]
+    ])-&gt;hint('Hint Text') ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'horizontalCssClasses' =&gt; [
+            'wrapper' =&gt; 'col-sm-4',
+        ]
+    ])-&gt;hint('Hint Text') ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="list-controls">List Controls</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="1"> 1</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="2"> 2</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+
+<div class="col-sm-6 col-sm-offset-3">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="1"> 1</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="2"> 2</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="radio"><label><input type="radio" name="Demo[demo]" value="1"> 1</label></div>
+<div class="radio"><label><input type="radio" name="Demo[demo]" value="2"> 2</label></div>
+<div class="radio"><label><input type="radio" name="Demo[demo]" value="3"> 3</label></div></div>
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>        </div>
+
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;dropDownList($items) ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkboxList($items) ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;label(false)-&gt;checkboxList($items) ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint Text')-&gt;radioList($items) ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="inline-lists">Inline Lists</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="1"> 1</label>
+<label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="2"> 2</label>
+<label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><label class="radio-inline"><input type="radio" name="Demo[demo]" value="1"> 1</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="2"> 2</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="3"> 3</label></div>
+<div class="help-block "></div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="1"> 1</label>
+<label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="2"> 2</label>
+<label class="checkbox-inline"><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><label class="radio-inline"><input type="radio" name="Demo[demo]" value="1"> 1</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="2"> 2</label>
+<label class="radio-inline"><input type="radio" name="Demo[demo]" value="3"> 3</label></div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+<div class="help-block col-sm-3">Hint Text</div>
+</div>        </div>
+
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;inline()-&gt;checkboxList($items) ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint Text')-&gt;inline()-&gt;radioList($items) ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="custom-inputs">Custom Inputs</h2>
+    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><span class="input-group-addon">@</span><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><span class="input-group-addon">@</span><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"><span class="input-group-addon">.00</span></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><span class="input-group-addon"><input type="checkbox" name="test" value="1"></span><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><span class="input-group-btn"><button class="btn btn-default">Go!</button></span><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"></div>
+<div class="help-block "></div>
+</div>
+
+</div>                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><div class="input-group-btn"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button><ul class="dropdown-menu"><li><a href="#">Action</a></li>
+<li><a href="#">Another Action</a></li>
+<li class="divider"></li>
+<li><a href="#">Separated Link</a></li></ul></div><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"></div>
+<div class="help-block "></div>
+</div>
+
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-3" for="demo-demo">Demolabel</label>
+<div class="col-sm-6">
+<div class="input-group"><div class="input-group-btn"><button class="btn btn-default">Action</button><button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu"><li><a href="#">Action</a></li>
+<li><a href="#">Another Action</a></li>
+<li class="divider"></li>
+<li><a href="#">Separated Link</a></li></ul></div><input type="text" id="demo-demo" class="form-control" name="Demo[demo]"></div>
+<div class="help-block "></div>
+</div>
+
+</div>        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;span class="input-group-addon"&gt;@&lt;/span&gt;{input}&lt;/div&gt;',
+    ]); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;span class="input-group-addon"&gt;@&lt;/span&gt;{input}'.
+            '&lt;span class="input-group-addon"&gt;.00&lt;/span&gt;&lt;/div&gt;',
+    ]); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;span class="input-group-addon"&gt;'.
+            Html::checkbox('test').'&lt;/span&gt;{input}&lt;/div&gt;',
+    ]); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;span class="input-group-btn"&gt;'.
+            '&lt;button class="btn btn-default"&gt;Go!&lt;/button&gt;&lt;/span&gt;{input}&lt;/div&gt;',
+    ]); ?&gt;
+    &lt;?php $menu = Menu::widget([
+        'options' =&gt; [
+            'class'=&gt;'dropdown-menu',
+        ],
+        'items' =&gt; [
+            ['label' =&gt; 'Action', 'url' =&gt; '#'],
+            ['label' =&gt; 'Another Action', 'url' =&gt; '#'],
+            ['options' =&gt; ['class'=&gt;'divider']],
+            ['label' =&gt; 'Separated Link', 'url' =&gt; '#'],
+        ],
+    ]); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;div class="input-group-btn"&gt;'.
+            '&lt;button class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;Action '.
+            '&lt;span class="caret"&gt;&lt;/span&gt;&lt;/button&gt;'.$menu.'&lt;/div&gt;{input}&lt;/div&gt;',
+    ]); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo', [
+        'inputTemplate' =&gt; '&lt;div class="input-group"&gt;&lt;div class="input-group-btn"&gt;'.
+            '&lt;button class="btn btn-default"&gt;Action&lt;/button&gt;'.
+            '&lt;button class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;'.
+            '&lt;span class="caret"&gt;&lt;/span&gt;&lt;/button&gt;'.$menu.'&lt;/div&gt;{input}&lt;/div&gt;',
+    ]); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+</form>
+<hr>
+
+<h2 id="custom-columns">Custom Columns</h2>
+
+<pre><code class="language-php">&lt;?php $form = ActiveForm::begin([
+    'layout' =&gt; 'horizontal',
+    'template' =&gt; "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
+    'fieldConfig' =&gt; [
+        'horizontalCssClasses' =&gt; [
+            'label' =&gt; 'col-sm-4',
+            'offset' =&gt; 'col-sm-offset-4',
+            'wrapper' =&gt; 'col-sm-8',
+            'error' =&gt; '',
+            'hint' =&gt; '',
+        ],
+    ],
+]) ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+
+<form id="w1" class="form-horizontal" action="/index.php?r=bs3demo/default/pages&amp;view=horizontal" method="post" role="form">
+<input type="hidden" name="_csrf" value="RllDRFRMeEc8NhsjZiIUIRwLFDIsexQhKz80LhEdM2olPRE3JX8JPg==">    <div class="row">
+        <div class="col-md-6">
+                        <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block ">Hint Text</div>
+<div class="help-block "></div>
+</div>
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+
+<div class="help-block "></div>
+</div>
+</div>            <div class="form-group field-demo-demo required">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="1"> 1</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="2"> 2</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div></div>
+
+<div class="help-block "></div>
+</div>
+</div>            <div class="form-group field-demo-demo required">
+<div class="col-sm-8 col-sm-offset-4">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block "></div>
+</div>
+
+</div>            <p>Error state:</p>
+                        <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<input type="text" id="demo-demo" class="form-control" name="Demo[demo]">
+<div class="help-block ">Hint Text</div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+</div>            <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<select id="demo-demo" class="form-control" name="Demo[demo]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+</div>            <div class="form-group field-demo-demo required has-error">
+<label class="control-label col-sm-4" for="demo-demo">Demolabel</label>
+<div class="col-sm-8">
+<input type="hidden" name="Demo[demo]" value=""><div id="demo-demo"><div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="1"> 1</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="2"> 2</label></div>
+<div class="checkbox"><label><input type="checkbox" name="Demo[demo][]" value="3"> 3</label></div></div>
+
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+</div>            <div class="form-group field-demo-demo required has-error">
+<div class="col-sm-8 col-sm-offset-4">
+<div class="checkbox">
+<label>
+<input type="hidden" name="Demo[demo]" value="0"><input type="checkbox" id="demo-demo" name="Demo[demo]" value="1">
+1
+</label>
+</div>
+<div class="help-block ">Demolabel cannot be blank.</div>
+</div>
+
+</div>        </div>
+        <div class="col-md-6">
+            <pre><code class="language-php">&lt;?php $form = ActiveForm::begin() ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;hint('Hint Text'); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;dropDownList($items); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkboxList($items); ?&gt;
+    &lt;?= $form-&gt;field($model, 'demo')-&gt;checkbox(); ?&gt;
+&lt;?php ActiveForm::end(); ?&gt;
+</code></pre>
+        </div>
+    </div>
+
+</form>    </div>
+</div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/yii2-bs3activeform/js/jquery.js"></script>
+<script src="/yii2-bs3activeform/js/yii.js"></script>
+<script src="/yii2-bs3activeform/js/yii.validation.js"></script>
+<script src="/yii2-bs3activeform/js/yii.activeForm.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#w0').yiiActiveForm({"demo":{"validate":function (attribute, value, messages) {yii.validation.required(value, messages, {"message":"Demolabel cannot be blank."});},"id":"demo-demo","name":"demo","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-demo-demo","input":"#demo-demo","error":".help-block"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"has-error","successCssClass":"has-success","validatingCssClass":"validating","ajaxParam":"ajax","ajaxDataType":"json"});
+jQuery('#w1').yiiActiveForm({"demo":{"validate":function (attribute, value, messages) {yii.validation.required(value, messages, {"message":"Demolabel cannot be blank."});},"id":"demo-demo","name":"demo","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-demo-demo","input":"#demo-demo","error":".help-block"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"has-error","successCssClass":"has-success","validatingCssClass":"validating","ajaxParam":"ajax","ajaxDataType":"json"});
+});</script></body>
+</html>
