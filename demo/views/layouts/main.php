@@ -16,6 +16,14 @@ $this->beginPage();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/atelier-forest.light.min.css">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <style>
+    .hljs {
+        background-color: #f5f5f5;
+    }
+    </style>
+    <script>hljs.initHighlightingOnLoad();</script>
     <title><?= Html::encode($this->title); ?></title>
     <?php $this->head() ?>
 </head>

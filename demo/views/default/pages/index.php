@@ -19,8 +19,8 @@ $model = new Demo;
                 'url'=>'#introduction',
             ],
             [
-                'label'=>'Group Options',
-                'url'=>'#group-options',
+                'label'=>'Field Options',
+                'url'=>'#field-options',
             ],
             [
                 'label'=>'Form Options',
@@ -85,7 +85,7 @@ MD
 <div class="alert alert-warning">
     <p>
         <b>Note:</b> This class does <i>not</i> include any Bootstrap 3 CSS or Javascript files.
-        We recommend to use the <tt>yii2-bootstrap</tt> extension to include those files.
+        We recommend using the <tt>yii2-bootstrap</tt> extension to include those files.
     </p>
 </div>
 
@@ -198,11 +198,13 @@ MD
                 that will be applied if there's no label (e.g. on checkboxes or if label was disabled).
                 The default ist:
                 <pre>
-'offset' =&gt; 'col-sm-offset-3',
-'label' =&gt; 'col-sm-3',
-'wrapper' =&gt; 'col-sm-6',
-'error' =&gt; '',
-'hint' =&gt; 'col-sm-3',
+[
+    'offset' =&gt; 'col-sm-offset-3',
+    'label' =&gt; 'col-sm-3',
+    'wrapper' =&gt; 'col-sm-6',
+    'error' =&gt; '',
+    'hint' =&gt; 'col-sm-3',
+]
                 </pre>
             </td>
         <tr>
