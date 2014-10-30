@@ -1,14 +1,15 @@
 BS3ActiveForm
 =============
 
-# Installation
+# THIS REPOSITORY IS DEPRECATED!
 
-We recommend to install this class with composer. If you included the
-composer autoloader you can use the class right away.
+This project has been integrated into Yii2 as part of the yii2-bootstrap extension.
+You should not used it anymore.
+
+For now we only keep it up to provide some extra documentation examples. They may not
+be fully compatible with the yii2-bootstrap version, though.
 
 # Documentation
-
-For the documentation please head over to our GitHub page
 
 [http://codemix.github.io/yii2-bs3activeform/](http://codemix.github.io/yii2-bs3activeform/)
 
